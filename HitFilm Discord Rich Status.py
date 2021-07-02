@@ -6,12 +6,13 @@ import psutil
 import win32gui
 w=win32gui #Initializing win32gui
 
-client_id = '860354715886682112'  #Client ID for HitFilm Express
+client_id = 'yeah this is not going on github sorry...'  #Client ID for HitFilm Express
 RPC = Presence(client_id) #Setting up RPC connection
 
 RPC.connect() #Connecting to RPC
 
 while True: #Main Loop
+    print("its working")
     if ("HitFilmExpress.exe" in (p.name() for p in psutil.process_iter())): #Checks if the program is runing
         start_time = mktime(time.localtime()) #Sets start time
         while ("HitFilmExpress.exe" in (p.name() for p in psutil.process_iter())): #While the user is still in HitFilm Express
